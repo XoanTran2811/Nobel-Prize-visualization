@@ -15,7 +15,7 @@ class NWinnerItemBio(scrapy.Item):
 #scrape the image URLs and bio text
 class NWinnerSpiderBio(scrapy.Spider):
 
-    name = 'nwinners_minibio'
+    name = 'bio_winners'
     allowed_domains =['en.wikipedia.org']
     start_urls =['https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country']
 
