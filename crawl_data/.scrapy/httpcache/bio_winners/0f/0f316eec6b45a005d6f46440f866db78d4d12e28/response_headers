@@ -1,0 +1,16 @@
+Date: Sat, 04 Apr 2020 12:30:15 GMT
+Etag: 94551baba18fd76c0ce9d1158db68b61
+Server: ATS/8.0.6
+Content-Type: image/jpeg
+Last-Modified: Fri, 24 Jan 2020 09:08:19 GMT
+X-Timestamp: 1579856898.17398
+Age: 76267
+X-Cache: cp5001 hit, cp5002 hit/534
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+X-Client-Ip: 171.251.98.209
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *
+Accept-Ranges: bytes

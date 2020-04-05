@@ -1,0 +1,10 @@
+Date: Sun, 05 Apr 2020 09:53:34 GMT
+Server: Varnish
+X-Varnish: 521542814
+X-Cache: cp5010 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front"
+Set-Cookie: WMF-Last-Access=05-Apr-2020;Path=/;HttpOnly;secure;Expires=Thu, 07 May 2020 00:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=05-Apr-2020;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Thu, 07 May 2020 00:00:00 GMT
+X-Client-Ip: 171.251.98.209
+Location: https://en.wikipedia.org/wiki/Karl_Ferdinand_Braun

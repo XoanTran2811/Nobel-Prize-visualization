@@ -1,0 +1,16 @@
+Date: Sun, 05 Apr 2020 09:38:45 GMT
+Content-Type: text/html; charset=utf-8
+Server: mw1411.eqiad.wmnet
+X-Content-Type-Options: nosniff
+P3P: CP="See https://www.wikidata.org/wiki/Special:CentralAutoLogin/P3P for more info."
+Vary: Accept-Encoding,X-Forwarded-Proto,Cookie,Authorization
+Expires: Sun, 05 Apr 2020 09:38:45 GMT
+Last-Modified: Sun, 05 Apr 2020 09:38:45 GMT
+Location: https://www.wikidata.org/wiki/Q192282
+Age: 3
+X-Cache: cp5009 miss, cp5008 pass
+X-Cache-Status: pass
+Server-Timing: cache;desc="pass"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+X-Client-Ip: 171.251.98.209
+Cache-Control: private, s-maxage=0, max-age=0, must-revalidate

@@ -1,0 +1,6 @@
+Referer: https://en.wikipedia.org/wiki/Charles_B._Huggins
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en
+User-Agent: Scrapy/1.6.0 (+https://scrapy.org)
+Accept-Encoding: gzip,deflate
+Cookie: WMF-Last-Access=05-Apr-2020; WMF-Last-Access-Global=05-Apr-2020; GeoIP=VN:33:Buon_Ma_Thuot:12.67:108.05:v4

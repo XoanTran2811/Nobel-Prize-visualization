@@ -19,7 +19,7 @@ class NWinnerSpiderBio(scrapy.Spider):
     allowed_domains =['en.wikipedia.org']
     start_urls =['https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country']
 
-    #custom_settings = {'ITEM_PIPELINES':{'nobel_winners.pipelines.ImagesPipeline':1}}
+    custom_settings = {'ITEM_PIPELINES':{'crawl_data.pipelines.ImagesPipeline':1}}
 
     def parse (self, response):
         

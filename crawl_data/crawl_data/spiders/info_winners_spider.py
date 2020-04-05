@@ -34,12 +34,12 @@ class NWinnerSpider(scrapy.Spider):
 
     def parse(self, response):
         #filename = response.url.split('/')[-1]
-        h3s = response.xpath('//h3')
+        h2s = response.xpath('//h2')
 
-        for h3 in h3s:
-            country = h3.xpath('span[@class="mw-headline"]/text()').extract()
+        for h2 in h2s:
+            country = h2.xpath('span[@class="mw-headline"]/text()').extract()
             if country:
-                winners = h3.xpath('following-sibling::ol[1]')
+                winners = h2.xpath('following-sibling::ol[1]')
                 for w in winners.xpath('li'):
                     wdata = process_winner_li(w, country[0])
                     request = scrapy.Request(wdata['link'], callback=self.parse_bio, dont_filter=True)
@@ -69,7 +69,7 @@ class NWinnerSpider(scrapy.Spider):
             {'name':'gender', 'code':'P21', 'link':True}
         ]
 
-        p_template = '//*[@id="{code}"]/div[2]/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]{link_html}/text()'
+        p_template = '//*[@id="{code}"]/div[2]/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]{link_html}/text()'
                      
         for prop in property_codes:
 
@@ -82,29 +82,6 @@ class NWinnerSpider(scrapy.Spider):
 
         yield item
 
-
-def get_persondata(table, item):
-    fields = ['Date of birth', 'Place of birth', 'Date of death', 'Place of death']
-    for tr in table.xpath('tr'):
-        label = tr.xpath('td[@class="persondata-label"]/text()').extract()
-        if label and label[0] in fields:
-            text = ' '.join(tr.xpath('td[not(@class)]/descendant-or-self::text()').extract())
-            print(text)
-            item[label[0].lower().replace(' ', '_')] = text
-
-
-def guess_gender(text, threshold=0):
-    he = len(list(re.finditer(' he ', text)))
-    she = len(list(re.finditer(' she ', text)))
-    diff = she - he
-
-    print('she %d, he %d, diff %d'%(she, he, diff))
-    if diff > threshold:
-        return 'female'
-    elif diff < -threshold:
-        return 'male'
-    else:
-        return None
 
 def process_winner_li(w, country=None):
     """

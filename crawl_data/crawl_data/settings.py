@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for nobel_winners project
+# Scrapy settings for crawl_data project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'nobel_winners'
+BOT_NAME = 'crawl_data'
 
-SPIDER_MODULES = ['nobel_winners.spiders']
-NEWSPIDER_MODULE = 'nobel_winners.spiders'
+SPIDER_MODULES = ['crawl_data.spiders']
+NEWSPIDER_MODULE = 'crawl_data.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'nobel_winners (+http://www.yourdomain.com)'
+#USER_AGENT = 'crawl_data (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'nobel_winners.middlewares.NobelWinnersSpiderMiddleware': 543,
+#    'crawl_data.middlewares.NobelWinnersSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'nobel_winners.middlewares.NobelWinnersDownloaderMiddleware': 543,
+#    'crawl_data.middlewares.NobelWinnersDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,8 +64,8 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'nobel_winners.pipelines.NobelImagesPipeline': 1,}
+#ITEM_PIPELINES = {
+#    'crawl_data.pipelines.NobelImagesPipeline': 1,}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
