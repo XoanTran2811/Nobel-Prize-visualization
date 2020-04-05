@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for crawl_data project
+# Scrapy settings for nobel_winners project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'crawl_data'
+BOT_NAME = 'nobel_winners'
 
-SPIDER_MODULES = ['crawl_data.spiders']
-NEWSPIDER_MODULE = 'crawl_data.spiders'
+SPIDER_MODULES = ['nobel_winners.spiders']
+NEWSPIDER_MODULE = 'nobel_winners.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'crawl_data (+http://www.yourdomain.com)'
+#USER_AGENT = 'nobel_winners (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'crawl_data.middlewares.CrawlDataSpiderMiddleware': 543,
+#    'nobel_winners.middlewares.NobelWinnersSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'crawl_data.middlewares.CrawlDataDownloaderMiddleware': 543,
+#    'nobel_winners.middlewares.NobelWinnersDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,9 +64,8 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'crawl_data.pipelines.CrawlDataPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'nobel_winners.pipelines.NobelImagesPipeline': 1,}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -80,10 +79,10 @@ ROBOTSTXT_OBEY = True
 #AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 # Enable showing throttling stats for every response received:
 #AUTOTHROTTLE_DEBUG = False
-
+IMAGES_STORE ='images'
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
+HTTPCACHE_ENABLED = True
 #HTTPCACHE_EXPIRATION_SECS = 0
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
