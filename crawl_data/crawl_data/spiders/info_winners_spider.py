@@ -34,12 +34,12 @@ class NWinnerSpider(scrapy.Spider):
 
     def parse(self, response):
         #filename = response.url.split('/')[-1]
-        h2s = response.xpath('//h2')
+        h3s = response.xpath('//h3')
 
-        for h2 in h2s:
-            country = h2.xpath('span[@class="mw-headline"]/text()').extract()
+        for h3 in h3s:
+            country = h3.xpath('span[@class="mw-headline"]/text()').extract()
             if country:
-                winners = h2.xpath('following-sibling::ol[1]')
+                winners = h3.xpath('following-sibling::ol[1]')
                 for w in winners.xpath('li'):
                     wdata = process_winner_li(w, country[0])
                     request = scrapy.Request(wdata['link'], callback=self.parse_bio, dont_filter=True)
@@ -69,7 +69,7 @@ class NWinnerSpider(scrapy.Spider):
             {'name':'gender', 'code':'P21', 'link':True}
         ]
 
-        p_template = '//*[@id="{code}"]/div[2]/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]{link_html}/text()'
+        p_template = '//*[@id="{code}"]/div[2]/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]{link_html}/text()'
                      
         for prop in property_codes:
 
