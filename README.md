@@ -1,6 +1,10 @@
 # Nobel-Prize-visualization
-Using python and javascript to visualization Nobel Prize dataset
+Using scrapy to crawl nobel prize wikipedia data
 
-The technology used: python, javascript, flask, mongoDB
+Using pandas, matplotlib to explore data 
+
+Using mongoDB to store data
+
+The technology used: python, mongoDB, scrapy
 
 Reference from Data Visualization with python and javascript
